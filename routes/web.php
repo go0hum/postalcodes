@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Models\Settlement;
-use App\Models\Municipality;
 use App\Http\Resources\AddressCollection;
 
 /*
@@ -18,6 +16,5 @@ use App\Http\Resources\AddressCollection;
 */
 
 Route::get('/', function () {
-    Settlement::with('municipality', 'locality', 'municipality.entity')->where('zip_code', 34198)->get();
     return view('welcome');
 });
