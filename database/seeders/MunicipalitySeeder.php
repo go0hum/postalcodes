@@ -26,7 +26,7 @@ class MunicipalitySeeder extends Seeder
                 Municipality::create([
                     'key' => intval($record['c_mnpio']),
                     'name' => strtoupper(Helper::stripAccents($record['D_mnpio'])),
-                    'entities_key' => $record['c_estado'],
+                    'entities_key' => intval($record['c_estado']),
                 ]);
                 $ids[] = $record['c_estado']."_".$record['c_mnpio'];
             }
@@ -37,7 +37,7 @@ class MunicipalitySeeder extends Seeder
                 Municipality::create([
                     'key' => intval($record['c_mnpio']),
                     'name' => strtoupper(Helper::stripAccents($record['D_mnpio'])),
-                    'entities_key' => $record['c_estado'],
+                    'entities_key' => intval($record['c_estado']),
                 ]);
                 $ids[] = $record['c_estado']."_".$record['c_mnpio'];
             }
@@ -48,7 +48,7 @@ class MunicipalitySeeder extends Seeder
                 Municipality::create([
                     'key' => intval($record['c_mnpio']),
                     'name' => strtoupper(Helper::stripAccents($record['D_mnpio'])),
-                    'entities_key' => $record['c_estado'],
+                    'entities_key' => intval($record['c_estado']),
                 ]);
                 $ids[] = $record['c_estado']."_".$record['c_mnpio'];
             }
@@ -59,7 +59,7 @@ class MunicipalitySeeder extends Seeder
                 Municipality::create([
                     'key' => intval($record['c_mnpio']),
                     'name' => strtoupper(Helper::stripAccents($record['D_mnpio'])),
-                    'entities_key' => $record['c_estado'],
+                    'entities_key' => intval($record['c_estado']),
                 ]);
                 $ids[] = $record['c_estado']."_".$record['c_mnpio'];
             }
@@ -70,7 +70,7 @@ class MunicipalitySeeder extends Seeder
                 Municipality::create([
                     'key' => intval($record['c_mnpio']),
                     'name' => strtoupper(Helper::stripAccents($record['D_mnpio'])),
-                    'entities_key' => $record['c_estado'],
+                    'entities_key' => intval($record['c_estado']),
                 ]);
                 $ids[] = $record['c_estado']."_".$record['c_mnpio'];
             }

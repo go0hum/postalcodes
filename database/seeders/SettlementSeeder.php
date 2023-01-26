@@ -45,9 +45,9 @@ class SettlementSeeder extends Seeder
                 'name' => strtoupper(Helper::stripAccents($record['d_asenta'])),
                 'zone_type' => strtoupper($record['d_zona']),
                 'type' => Helper::stripAccents($record['d_tipo_asenta']) ?? '',
-                'entities_key' => $record['c_estado'],
-                'municipalities_id' => $municipaly[$record['c_estado']][$record['c_mnpio']],
-                'localities_id' => empty($Localy[$municipaly[$record['c_estado']][$record['c_mnpio']]][$record['c_cve_ciudad']]) ? 0 : $Localy[$municipaly[$record['c_estado']][$record['c_mnpio']]][$record['c_cve_ciudad']],
+                'entities_key' => intval($record['c_estado']),
+                'municipalities_id' => $municipaly[intval($record['c_estado'])][intval($record['c_mnpio'])],
+                'localities_id' => empty($Localy[$municipaly[intval($record['c_estado'])][intval($record['c_mnpio'])]][intval($record['c_cve_ciudad'])]) ? 0 : $Localy[$municipaly[intval($record['c_estado'])][intval($record['c_mnpio'])]][intval($record['c_cve_ciudad'])],
             ]);
         }
         $entities = Helper::postalCode(2);
@@ -59,9 +59,9 @@ class SettlementSeeder extends Seeder
                 'name' => strtoupper(Helper::stripAccents($record['d_asenta'])),
                 'zone_type' => strtoupper($record['d_zona']),
                 'type' => Helper::stripAccents($record['d_tipo_asenta']) ?? '',
-                'entities_key' => $record['c_estado'],
-                'municipalities_id' => $municipaly[$record['c_estado']][$record['c_mnpio']],
-                'localities_id' => empty($Localy[$municipaly[$record['c_estado']][$record['c_mnpio']]][$record['c_cve_ciudad']]) ? 0 : $Localy[$municipaly[$record['c_estado']][$record['c_mnpio']]][$record['c_cve_ciudad']],
+                'entities_key' => intval($record['c_estado']),
+                'municipalities_id' => $municipaly[intval($record['c_estado'])][intval($record['c_mnpio'])],
+                'localities_id' => empty($Localy[$municipaly[intval($record['c_estado'])][intval($record['c_mnpio'])]][intval($record['c_cve_ciudad'])]) ? 0 : $Localy[$municipaly[intval($record['c_estado'])][intval($record['c_mnpio'])]][intval($record['c_cve_ciudad'])],
             ]);
         }
         $entities = Helper::postalCode(3);
@@ -73,9 +73,9 @@ class SettlementSeeder extends Seeder
                 'name' => strtoupper(Helper::stripAccents($record['d_asenta'])),
                 'zone_type' => strtoupper($record['d_zona']),
                 'type' => Helper::stripAccents($record['d_tipo_asenta']) ?? '',
-                'entities_key' => $record['c_estado'],
-                'municipalities_id' => $municipaly[$record['c_estado']][$record['c_mnpio']],
-                'localities_id' => empty($Localy[$municipaly[$record['c_estado']][$record['c_mnpio']]][$record['c_cve_ciudad']]) ? 0 : $Localy[$municipaly[$record['c_estado']][$record['c_mnpio']]][$record['c_cve_ciudad']],
+                'entities_key' => intval($record['c_estado']),
+                'municipalities_id' => $municipaly[intval($record['c_estado'])][intval($record['c_mnpio'])],
+                'localities_id' => empty($Localy[$municipaly[intval($record['c_estado'])][intval($record['c_mnpio'])]][intval($record['c_cve_ciudad'])]) ? 0 : $Localy[$municipaly[intval($record['c_estado'])][intval($record['c_mnpio'])]][intval($record['c_cve_ciudad'])],
             ]);
         }
         $entities = Helper::postalCode(4);
@@ -87,9 +87,9 @@ class SettlementSeeder extends Seeder
                 'name' => strtoupper(Helper::stripAccents($record['d_asenta'])),
                 'zone_type' => strtoupper($record['d_zona']),
                 'type' => Helper::stripAccents($record['d_tipo_asenta']) ?? '',
-                'entities_key' => $record['c_estado'],
-                'municipalities_id' => $municipaly[$record['c_estado']][$record['c_mnpio']],
-                'localities_id' => empty($Localy[$municipaly[$record['c_estado']][$record['c_mnpio']]][$record['c_cve_ciudad']]) ? 0 : $Localy[$municipaly[$record['c_estado']][$record['c_mnpio']]][$record['c_cve_ciudad']],
+                'entities_key' => intval($record['c_estado']),
+                'municipalities_id' => $municipaly[intval($record['c_estado'])][intval($record['c_mnpio'])],
+                'localities_id' => empty($Localy[$municipaly[intval($record['c_estado'])][intval($record['c_mnpio'])]][intval($record['c_cve_ciudad'])]) ? 0 : $Localy[$municipaly[intval($record['c_estado'])][intval($record['c_mnpio'])]][intval($record['c_cve_ciudad'])],
             ]);
         }
         $entities = Helper::postalCode();
@@ -101,9 +101,9 @@ class SettlementSeeder extends Seeder
                 'name' => strtoupper(Helper::stripAccents($record['d_asenta'])),
                 'zone_type' => strtoupper($record['d_zona']),
                 'type' => Helper::stripAccents($record['d_tipo_asenta']) ?? '',
-                'entities_key' => $record['c_estado'],
-                'municipalities_id' => $municipaly[$record['c_estado']][$record['c_mnpio']],
-                'localities_id' => empty($Localy[$municipaly[$record['c_estado']][$record['c_mnpio']]][$record['c_cve_ciudad']]) ? 0 : $Localy[$municipaly[$record['c_estado']][$record['c_mnpio']]][$record['c_cve_ciudad']],
+                'entities_key' => intval($record['c_estado']),
+                'municipalities_id' => $municipaly[intval($record['c_estado'])][intval($record['c_mnpio'])],
+                'localities_id' => empty($Localy[$municipaly[intval($record['c_estado'])][intval($record['c_mnpio'])]][intval($record['c_cve_ciudad'])]) ? 0 : $Localy[$municipaly[intval($record['c_estado'])][intval($record['c_mnpio'])]][intval($record['c_cve_ciudad'])],
             ]);
         }
     }
