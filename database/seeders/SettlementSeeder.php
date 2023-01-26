@@ -38,6 +38,7 @@ class SettlementSeeder extends Seeder
 
         $entities = Helper::postalCode(1);
         foreach ($entities as $key => $record) {
+            print strtoupper(Helper::stripAccents($record['d_asenta'])) . PHP_EOL;
             Settlement::create([
                 'key' => ($record['id_asenta_cpcons']),
                 'zip_code' => $record['d_codigo'],
@@ -51,6 +52,7 @@ class SettlementSeeder extends Seeder
         }
         $entities = Helper::postalCode(2);
         foreach ($entities as $key => $record) {
+            print strtoupper(Helper::stripAccents($record['d_asenta'])) . PHP_EOL;
             Settlement::create([
                 'key' => intval($record['id_asenta_cpcons']),
                 'zip_code' => $record['d_codigo'],
@@ -64,6 +66,7 @@ class SettlementSeeder extends Seeder
         }
         $entities = Helper::postalCode(3);
         foreach ($entities as $key => $record) {
+            print strtoupper(Helper::stripAccents($record['d_asenta'])) . PHP_EOL;
             Settlement::create([
                 'key' => intval($record['id_asenta_cpcons']),
                 'zip_code' => $record['d_codigo'],
@@ -77,6 +80,7 @@ class SettlementSeeder extends Seeder
         }
         $entities = Helper::postalCode(4);
         foreach ($entities as $key => $record) {
+            print strtoupper(Helper::stripAccents($record['d_asenta'])) . PHP_EOL;
             Settlement::create([
                 'key' => intval($record['id_asenta_cpcons']),
                 'zip_code' => $record['d_codigo'],
@@ -90,6 +94,7 @@ class SettlementSeeder extends Seeder
         }
         $entities = Helper::postalCode();
         foreach ($entities as $key => $record) {
+            print strtoupper(Helper::stripAccents($record['d_asenta'])) . PHP_EOL;
             Settlement::create([
                 'key' => intval($record['id_asenta_cpcons']),
                 'zip_code' => $record['d_codigo'],
