@@ -22,7 +22,7 @@ class EntitySeeder extends Seeder
             if (!in_array(intval($record['c_estado']), $ids)) {
                 Entity::create([
                     'key' => $record['c_estado'],
-                    'name' => strtoupper($record['d_estado']),
+                    'name' => strtoupper(Helper::stripAccents($record['d_estado'])),
                 ]);
                 $ids[] = $record['c_estado'];
             }
@@ -32,7 +32,7 @@ class EntitySeeder extends Seeder
             if (!in_array(intval($record['c_estado']), $ids)) {
                 Entity::create([
                     'key' => $record['c_estado'],
-                    'name' => strtoupper($record['d_estado']),
+                    'name' => strtoupper(Helper::stripAccents($record['d_estado'])),
                 ]);
                 $ids[] = $record['c_estado'];
             }
@@ -42,7 +42,7 @@ class EntitySeeder extends Seeder
             if (!in_array(intval($record['c_estado']), $ids)) {
                 Entity::create([
                     'key' => $record['c_estado'],
-                    'name' => strtoupper($record['d_estado']),
+                    'name' => strtoupper(Helper::stripAccents($record['d_estado'])),
                 ]);
                 $ids[] = $record['c_estado'];
             }
@@ -52,7 +52,7 @@ class EntitySeeder extends Seeder
             if (!in_array(intval($record['c_estado']), $ids)) {
                 Entity::create([
                     'key' => $record['c_estado'],
-                    'name' => strtoupper($record['d_estado']),
+                    'name' => strtoupper(Helper::stripAccents($record['d_estado'])),
                 ]);
                 $ids[] = $record['c_estado'];
             }
@@ -62,7 +62,7 @@ class EntitySeeder extends Seeder
             if (!in_array(intval($record['c_estado']), $ids)) {
                 Entity::create([
                     'key' => $record['c_estado'],
-                    'name' => strtoupper($record['d_estado']),
+                    'name' => strtoupper(Helper::stripAccents($record['d_estado'])),
                 ]);
                 $ids[] = $record['c_estado'];
             }

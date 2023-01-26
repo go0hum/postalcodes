@@ -39,11 +39,11 @@ class SettlementSeeder extends Seeder
         $entities = Helper::postalCode(1);
         foreach ($entities as $key => $record) {
             Settlement::create([
-                'key' => $record['id_asenta_cpcons'],
+                'key' => ($record['id_asenta_cpcons']),
                 'zip_code' => $record['d_codigo'],
-                'name' => strtoupper($record['d_asenta']),
+                'name' => strtoupper(Helper::stripAccents($record['d_asenta'])),
                 'zone_type' => strtoupper($record['d_zona']),
-                'type' => strtoupper($record['d_tipo_asenta'] ?? ''),
+                'type' => Helper::stripAccents($record['d_tipo_asenta']) ?? '',
                 'entities_key' => $record['c_estado'],
                 'municipalities_id' => $municipaly[$record['c_estado']][$record['c_mnpio']],
                 'localities_id' => empty($Localy[$municipaly[$record['c_estado']][$record['c_mnpio']]][$record['c_cve_ciudad']]) ? 0 : $Localy[$municipaly[$record['c_estado']][$record['c_mnpio']]][$record['c_cve_ciudad']],
@@ -52,11 +52,11 @@ class SettlementSeeder extends Seeder
         $entities = Helper::postalCode(2);
         foreach ($entities as $key => $record) {
             Settlement::create([
-                'key' => $record['id_asenta_cpcons'],
+                'key' => intval($record['id_asenta_cpcons']),
                 'zip_code' => $record['d_codigo'],
-                'name' => strtoupper($record['d_asenta']),
+                'name' => strtoupper(Helper::stripAccents($record['d_asenta'])),
                 'zone_type' => strtoupper($record['d_zona']),
-                'type' => strtoupper($record['d_tipo_asenta'] ?? ''),
+                'type' => Helper::stripAccents($record['d_tipo_asenta']) ?? '',
                 'entities_key' => $record['c_estado'],
                 'municipalities_id' => $municipaly[$record['c_estado']][$record['c_mnpio']],
                 'localities_id' => empty($Localy[$municipaly[$record['c_estado']][$record['c_mnpio']]][$record['c_cve_ciudad']]) ? 0 : $Localy[$municipaly[$record['c_estado']][$record['c_mnpio']]][$record['c_cve_ciudad']],
@@ -65,11 +65,11 @@ class SettlementSeeder extends Seeder
         $entities = Helper::postalCode(3);
         foreach ($entities as $key => $record) {
             Settlement::create([
-                'key' => $record['id_asenta_cpcons'],
+                'key' => intval($record['id_asenta_cpcons']),
                 'zip_code' => $record['d_codigo'],
-                'name' => strtoupper($record['d_asenta']),
+                'name' => strtoupper(Helper::stripAccents($record['d_asenta'])),
                 'zone_type' => strtoupper($record['d_zona']),
-                'type' => strtoupper($record['d_tipo_asenta'] ?? ''),
+                'type' => Helper::stripAccents($record['d_tipo_asenta']) ?? '',
                 'entities_key' => $record['c_estado'],
                 'municipalities_id' => $municipaly[$record['c_estado']][$record['c_mnpio']],
                 'localities_id' => empty($Localy[$municipaly[$record['c_estado']][$record['c_mnpio']]][$record['c_cve_ciudad']]) ? 0 : $Localy[$municipaly[$record['c_estado']][$record['c_mnpio']]][$record['c_cve_ciudad']],
@@ -78,11 +78,11 @@ class SettlementSeeder extends Seeder
         $entities = Helper::postalCode(4);
         foreach ($entities as $key => $record) {
             Settlement::create([
-                'key' => $record['id_asenta_cpcons'],
+                'key' => intval($record['id_asenta_cpcons']),
                 'zip_code' => $record['d_codigo'],
-                'name' => strtoupper($record['d_asenta']),
+                'name' => strtoupper(Helper::stripAccents($record['d_asenta'])),
                 'zone_type' => strtoupper($record['d_zona']),
-                'type' => strtoupper($record['d_tipo_asenta'] ?? ''),
+                'type' => Helper::stripAccents($record['d_tipo_asenta']) ?? '',
                 'entities_key' => $record['c_estado'],
                 'municipalities_id' => $municipaly[$record['c_estado']][$record['c_mnpio']],
                 'localities_id' => empty($Localy[$municipaly[$record['c_estado']][$record['c_mnpio']]][$record['c_cve_ciudad']]) ? 0 : $Localy[$municipaly[$record['c_estado']][$record['c_mnpio']]][$record['c_cve_ciudad']],
@@ -91,11 +91,11 @@ class SettlementSeeder extends Seeder
         $entities = Helper::postalCode();
         foreach ($entities as $key => $record) {
             Settlement::create([
-                'key' => $record['id_asenta_cpcons'],
+                'key' => intval($record['id_asenta_cpcons']),
                 'zip_code' => $record['d_codigo'],
-                'name' => strtoupper($record['d_asenta']),
+                'name' => strtoupper(Helper::stripAccents($record['d_asenta'])),
                 'zone_type' => strtoupper($record['d_zona']),
-                'type' => strtoupper($record['d_tipo_asenta'] ?? ''),
+                'type' => Helper::stripAccents($record['d_tipo_asenta']) ?? '',
                 'entities_key' => $record['c_estado'],
                 'municipalities_id' => $municipaly[$record['c_estado']][$record['c_mnpio']],
                 'localities_id' => empty($Localy[$municipaly[$record['c_estado']][$record['c_mnpio']]][$record['c_cve_ciudad']]) ? 0 : $Localy[$municipaly[$record['c_estado']][$record['c_mnpio']]][$record['c_cve_ciudad']],

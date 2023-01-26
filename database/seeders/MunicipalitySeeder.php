@@ -25,7 +25,7 @@ class MunicipalitySeeder extends Seeder
             if (!in_array($record['c_estado']."_".$record['c_mnpio'], $ids)) {
                 Municipality::create([
                     'key' => $record['c_mnpio'],
-                    'name' => strtoupper($record['D_mnpio']),
+                    'name' => strtoupper(Helper::stripAccents($record['D_mnpio'])),
                     'entities_key' => $record['c_estado'],
                 ]);
                 $ids[] = $record['c_estado']."_".$record['c_mnpio'];
@@ -36,7 +36,7 @@ class MunicipalitySeeder extends Seeder
             if (!in_array($record['c_estado']."_".$record['c_mnpio'], $ids)) {
                 Municipality::create([
                     'key' => $record['c_mnpio'],
-                    'name' => strtoupper($record['D_mnpio']),
+                    'name' => strtoupper(Helper::stripAccents($record['D_mnpio'])),
                     'entities_key' => $record['c_estado'],
                 ]);
                 $ids[] = $record['c_estado']."_".$record['c_mnpio'];
@@ -47,7 +47,7 @@ class MunicipalitySeeder extends Seeder
             if (!in_array($record['c_estado']."_".$record['c_mnpio'], $ids)) {
                 Municipality::create([
                     'key' => $record['c_mnpio'],
-                    'name' => strtoupper($record['D_mnpio']),
+                    'name' => strtoupper(Helper::stripAccents($record['D_mnpio'])),
                     'entities_key' => $record['c_estado'],
                 ]);
                 $ids[] = $record['c_estado']."_".$record['c_mnpio'];
@@ -58,7 +58,7 @@ class MunicipalitySeeder extends Seeder
             if (!in_array($record['c_estado']."_".$record['c_mnpio'], $ids)) {
                 Municipality::create([
                     'key' => $record['c_mnpio'],
-                    'name' => strtoupper($record['D_mnpio']),
+                    'name' => strtoupper(Helper::stripAccents($record['D_mnpio'])),
                     'entities_key' => $record['c_estado'],
                 ]);
                 $ids[] = $record['c_estado']."_".$record['c_mnpio'];
@@ -69,7 +69,7 @@ class MunicipalitySeeder extends Seeder
             if (!in_array($record['c_estado']."_".$record['c_mnpio'], $ids)) {
                 Municipality::create([
                     'key' => $record['c_mnpio'],
-                    'name' => strtoupper($record['D_mnpio']),
+                    'name' => strtoupper(Helper::stripAccents($record['D_mnpio'])),
                     'entities_key' => $record['c_estado'],
                 ]);
                 $ids[] = $record['c_estado']."_".$record['c_mnpio'];

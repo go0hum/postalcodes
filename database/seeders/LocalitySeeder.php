@@ -34,7 +34,7 @@ class LocalitySeeder extends Seeder
             if (!empty($record['c_cve_ciudad']) && !in_array($record['c_estado']."_".$record['c_mnpio']."_".$record['c_cve_ciudad'], $ids)) {
                 Locality::create([
                     'key' => $record['c_cve_ciudad'],
-                    'name' => strtoupper($record['d_ciudad']),
+                    'name' => strtoupper(Helper::stripAccents($record['d_ciudad'])),
                     'municipalities_id' => $municipaly[$record['c_estado']][$record['c_mnpio']],
                 ]);
                 $ids[] = $record['c_estado']."_".$record['c_mnpio']."_".$record['c_cve_ciudad'];
@@ -45,7 +45,7 @@ class LocalitySeeder extends Seeder
             if (!empty($record['c_cve_ciudad']) && !in_array($record['c_estado']."_".$record['c_mnpio']."_".$record['c_cve_ciudad'], $ids)) {
                 Locality::create([
                     'key' => $record['c_cve_ciudad'],
-                    'name' => strtoupper($record['d_ciudad']),
+                    'name' => strtoupper(Helper::stripAccents($record['d_ciudad'])),
                     'municipalities_id' => $municipaly[$record['c_estado']][$record['c_mnpio']],
                 ]);
                 $ids[] = $record['c_estado']."_".$record['c_mnpio']."_".$record['c_cve_ciudad'];
@@ -56,7 +56,7 @@ class LocalitySeeder extends Seeder
             if (!empty($record['c_cve_ciudad']) && !in_array($record['c_estado']."_".$record['c_mnpio']."_".$record['c_cve_ciudad'], $ids)) {
                 Locality::create([
                     'key' => $record['c_cve_ciudad'],
-                    'name' => strtoupper($record['d_ciudad']),
+                    'name' => strtoupper(Helper::stripAccents($record['d_ciudad'])),
                     'municipalities_id' => $municipaly[$record['c_estado']][$record['c_mnpio']],
                 ]);
                 $ids[] = $record['c_estado']."_".$record['c_mnpio']."_".$record['c_cve_ciudad'];
@@ -67,7 +67,7 @@ class LocalitySeeder extends Seeder
             if (!empty($record['c_cve_ciudad']) && !in_array($record['c_estado']."_".$record['c_mnpio']."_".$record['c_cve_ciudad'], $ids)) {
                 Locality::create([
                     'key' => $record['c_cve_ciudad'],
-                    'name' => strtoupper($record['d_ciudad']),
+                    'name' => strtoupper(Helper::stripAccents($record['d_ciudad'])),
                     'municipalities_id' => $municipaly[$record['c_estado']][$record['c_mnpio']],
                 ]);
                 $ids[] = $record['c_estado']."_".$record['c_mnpio']."_".$record['c_cve_ciudad'];
@@ -78,7 +78,7 @@ class LocalitySeeder extends Seeder
             if (!empty($record['c_cve_ciudad']) && !in_array($record['c_estado']."_".$record['c_mnpio']."_".$record['c_cve_ciudad'], $ids)) {
                 Locality::create([
                     'key' => $record['c_cve_ciudad'],
-                    'name' => strtoupper($record['d_ciudad']),
+                    'name' => strtoupper(Helper::stripAccents($record['d_ciudad'])),
                     'municipalities_id' => $municipaly[$record['c_estado']][$record['c_mnpio']],
                 ]);
                 $ids[] = $record['c_estado']."_".$record['c_mnpio']."_".$record['c_cve_ciudad'];
