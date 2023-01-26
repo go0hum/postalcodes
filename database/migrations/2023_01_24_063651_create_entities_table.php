@@ -14,7 +14,7 @@ class CreateEntitiesTable extends Migration
     public function up()
     {
         Schema::create('entities', function (Blueprint $table) {
-            $table->string('key', 20)->primary();
+            $table->unsignedBigInteger('key', 20)->primary();
             $table->text('name');
             $table->timestamps();
         });

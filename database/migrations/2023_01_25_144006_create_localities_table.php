@@ -15,7 +15,7 @@ class CreateLocalitiesTable extends Migration
     {
         Schema::create('localities', function (Blueprint $table) {
             $table->id();
-            $table->string('key', 20)->index();
+            $table->unsignedBigInteger('key', 20)->index();
             $table->text('name');
             $table->unsignedBigInteger('municipalities_id')->index();
             $table->foreign('municipalities_id')->references('id')->on('municipalities');

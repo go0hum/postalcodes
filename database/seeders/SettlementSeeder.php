@@ -40,7 +40,7 @@ class SettlementSeeder extends Seeder
         foreach ($entities as $key => $record) {
             print strtoupper(Helper::stripAccents($record['d_asenta'])) . PHP_EOL;
             Settlement::create([
-                'key' => ($record['id_asenta_cpcons']),
+                'key' => intval($record['id_asenta_cpcons']),
                 'zip_code' => $record['d_codigo'],
                 'name' => strtoupper(Helper::stripAccents($record['d_asenta'])),
                 'zone_type' => strtoupper($record['d_zona']),

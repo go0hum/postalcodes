@@ -15,9 +15,9 @@ class CreateMunicipalitiesTable extends Migration
     {
         Schema::create('municipalities', function (Blueprint $table) {
             $table->id();
-            $table->string('key', 20)->index();
+            $table->unsignedBigInteger('key', 20)->index();
             $table->text('name');
-            $table->string('entities_key', 20)->index();
+            $table->unsignedBigInteger('entities_key', 20)->index();
             $table->foreign('entities_key')->references('key')->on('entities');
             $table->timestamps();
         });
