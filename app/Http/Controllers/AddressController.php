@@ -10,6 +10,7 @@ class AddressController extends Controller
 {
     public function getInfoByZipCode($code) 
     {     
+        $localityName = '';
         $settlements = Settlement::with('municipality', 'locality', 'municipality.entity')->where('zip_code', $code)->get();
 
         if ($settlements->count() === 0) {
@@ -25,6 +26,10 @@ class AddressController extends Controller
                     'key' => $settlements[$key]->locality->key,
                     'name' => $settlements[$key]->locality->name,
                 ];
+
+                if ($localityName == '') {
+                    $localityName = $settlements[$key]->locality->name;
+                }
             }
 
             $settlementsArray[] = [
@@ -33,13 +38,13 @@ class AddressController extends Controller
                 'zone_type' => $settlement->zone_type,
                 'settlement_type' => [
                     'name' => $settlement->type
-                ],
-                'locality' => $locality
+                ]
             ];
         }
 
         $response = [
             'zip_code' => $settlements[0]->zip_code,
+            'locality' => $localityName,
             'federal_entity' => [
                 "key" =>  $settlements->first()->municipality->first()->entity->key,
                 "name" => $settlements->first()->municipality->first()->entity->name,
